@@ -9,7 +9,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Django</a>
+            <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -17,23 +17,18 @@
                 <div class="navbar-nav">
                     <a class="nav-link active" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="{% url 'admin:index' %}">Admin</a>
-                    <a class="nav-link" href="{% url 'basic_app:register' %}">Registration</a>
-
-                    {% if user.is_authenticated %}
-                    <li><a class="nav-link" href="{% url 'logout' %}">Lougout</a></li>
-                    {% else %}
-                    <li><a class="nav-link" href="{% url 'basic_app:user_login' %}">Login</a></li>
-                    {% endif %}
+                    <a class="nav-link" href="{% url 'basic_app:other' %}">Other</a>
                 </div>
             </div>
+
         </div>
+
     </nav>
 
     <div class="container">
         {% block body_block %}
+
         {% endblock %}
     </div>
-
-
 </body>
 </html>
